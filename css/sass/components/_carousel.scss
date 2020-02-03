@@ -248,7 +248,11 @@
         font-size: 15px;
         color: $black;
         @include transition(all 0.3s ease-in-out);
-        margin-bottom: 10px;
+        height: 42px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        text-align: center;
 
         &:hover {
             color: $red;

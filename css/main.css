@@ -752,7 +752,11 @@ html[dir=ltr] .navbar-cont .close-btn {
   -o-transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  margin-bottom: 10px;
+  height: 42px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 .product .pro-name:hover {
   color: #c8161d;
