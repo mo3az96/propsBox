@@ -39,6 +39,7 @@
 
     .mega-head {
         margin: 0 0 17px;
+        text-transform: capitalize;
 
         .mega-head-a {
             font-size: 16px;
@@ -61,6 +62,16 @@
         &:hover {
             color: $red;
             transform: translateX(-8px);
+        }
+    }
+}
+
+#{$ltr} .megamenu-div {
+    .mega-a {
+
+        &:hover {
+            color: $red;
+            transform: translateX(8px);
         }
     }
 }

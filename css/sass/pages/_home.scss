@@ -24,6 +24,7 @@
 
             .cat-name {
                 background-color: $red;
+
             }
         }
     }
@@ -40,6 +41,7 @@
         justify-content: center;
         font-size: 18px;
         color: #fff;
+        text-transform: capitalize;
         @include transition(all 0.3s ease-in-out);
     }
 }
@@ -64,6 +66,17 @@
         display: block;
         margin: 0 20px;
         transform: rotate(180deg) translateY(5px);
+    }
+}
+
+#{$ltr} .sec-header {
+
+    &::before {
+        transform: rotate(180deg) translateY(5px);
+    }
+
+    &::after {
+        transform: none;
     }
 }
 

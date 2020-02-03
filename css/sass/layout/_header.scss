@@ -27,6 +27,22 @@ header {
         @include md {
             max-width: 100px;
         }
+
+        .Logo-dark {
+            display: none;
+
+            @include xs {
+                display: block;
+            }
+        }
+
+        .Logo-light {
+            display: block;
+
+            @include xs {
+                display: none;
+            }
+        }
     }
 
     ._2nd-sec {
@@ -45,6 +61,9 @@ header {
         color: $fff;
         margin-right: 27px;
         @include transition(all 0.3s ease-in-out);
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         &:hover {
             color: $hover;
@@ -52,6 +71,10 @@ header {
 
         @include xs {
             color: $black;
+        }
+
+        @include xs {
+            margin-right: 20px;
         }
     }
 
@@ -84,6 +107,32 @@ header {
             .user-anchor {
                 color: $hover;
             }
+        }
+    }
+}
+
+#{$ltr} header {
+    .user-anchor {
+        margin-right: 0;
+        margin-left: 27px;
+
+        @include xs {
+            margin-left: 20px;
+            margin-right: 0;
+        }
+    }
+
+    .user-anchor-div {
+        margin-right: 0;
+        margin-left: 27px;
+
+        .user-anchor {
+            margin: 0;
+        }
+
+        @include xs {
+            margin-left: 20px;
+            margin-right: 0;
         }
     }
 }
@@ -157,6 +206,20 @@ header {
 
         &:hover {
             color: $hover;
+        }
+    }
+
+    .logo {
+        .Logo-dark {
+            display: block;
+        }
+
+        .Logo-light {
+            display: none;
+
+            @include xs {
+                display: none;
+            }
         }
     }
 }

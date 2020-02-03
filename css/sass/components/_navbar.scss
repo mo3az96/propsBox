@@ -3,7 +3,14 @@
     align-items: center;
     justify-content: center;
     margin-left: 33px;
+    text-transform: capitalize;
 }
+
+#{$ltr} .mo-navbar {
+    margin-left: 0;
+    margin-right: 33px;
+}
+
 
 
 
@@ -12,6 +19,20 @@
 
     &:last-of-type {
         margin: 0;
+    }
+}
+
+#{$ltr} .nav-li {
+    margin-right: 20px;
+    margin-left: 0;
+
+    &:last-of-type {
+        margin: 0;
+    }
+
+    @include xs {
+        margin: 0;
+        width: 100%;
     }
 }
 

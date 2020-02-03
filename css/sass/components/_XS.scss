@@ -48,6 +48,10 @@
 
         .nav-anchor {
             color: $black;
+
+            @include xs {
+                line-height: unset;
+            }
         }
 
         .megaslide {
@@ -110,10 +114,54 @@
 
                 &:hover {
                     color: $red;
-                    transform: translateX(-8px);
+                    transform: none;
                 }
             }
         }
     }
 
+}
+
+#{$ltr} {
+    .navbar-cont {
+        .close-btn {
+            right: 25px;
+            left: auto;
+        }
+    }
+
+    .navbar-cont {
+        @include xs {
+            .mo-navbar {
+                transform-origin: left;
+            }
+
+            .megaslide {
+                width: 100%;
+            }
+
+            .megamenu-div {
+                padding: 0 0;
+                padding-left: 10px;
+                width: 100%;
+
+                .mega-head {
+
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .mega-head-a {
+                        font-size: 15px;
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                    }
+                }
+            }
+        }
+
+    }
 }
