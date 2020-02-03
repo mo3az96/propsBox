@@ -1,0 +1,162 @@
+header {
+    background-color: rgba($black, 0.4);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    border-bottom: 1px solid rgba($fff, 0.2);
+    padding: 20px 0;
+    z-index: 9;
+
+    @include xs {
+        padding: 10px 0;
+        background-color: $fff;
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo {
+        max-width: 189px;
+        display: flex;
+        align-items: center;
+
+        @include md {
+            max-width: 100px;
+        }
+    }
+
+    ._2nd-sec {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mo-user-nav {
+        display: flex;
+        align-items: center;
+    }
+
+    .user-anchor {
+        font-size: 20px;
+        color: $fff;
+        margin-right: 27px;
+        @include transition(all 0.3s ease-in-out);
+
+        &:hover {
+            color: $hover;
+        }
+
+        @include xs {
+            color: $black;
+        }
+    }
+
+    .mo-menu-icon {
+        display: none;
+
+        @include xs {
+            display: flex;
+        }
+    }
+
+    .user-anchor-div {
+        position: relative;
+        margin-right: 27px;
+
+        .user-anchor {
+            margin: 0;
+        }
+
+        @include xs {
+            margin-right: 20px;
+        }
+
+        &:hover {
+            .drop-menu {
+                visibility: visible;
+                opacity: 1;
+            }
+
+            .user-anchor {
+                color: $hover;
+            }
+        }
+    }
+}
+
+.drop-menu {
+    position: absolute;
+    width: 132px;
+    height: auto;
+    left: 50%;
+    top: 28px;
+    transform: translateX(-50%);
+    z-index: 10;
+    background-color: $fff;
+    box-shadow: 0px 0px 10px 0px rgba($black, 0.1);
+    padding: 10px 10px 0;
+    margin: 2px 0 0;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    @include transition(all 0.5s ease-in-out);
+
+    &:before {
+        content: "";
+        width: 0;
+        height: 0;
+        display: block;
+        border-width: 6px;
+        border-color: transparent transparent #ffffff;
+        border-style: solid;
+        top: -12px;
+        position: absolute;
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    li {
+        width: 100%;
+        border-bottom: 1px solid #ededed;
+        padding-bottom: 8px;
+        margin-bottom: 6px;
+
+        &:last-of-type {
+            border: none;
+        }
+    }
+
+    a {
+        color: #666;
+        @include transition(all 0.3s ease-in-out);
+        font-size: 15px;
+
+        &:hover {
+            color: $hover;
+        }
+    }
+}
+
+.fixed-header {
+    background-color: rgba($fff, 1);
+
+    .user-anchor {
+        color: $black;
+
+        &:hover {
+            color: $hover;
+        }
+    }
+
+    .nav-anchor {
+        color: $black;
+
+        &:hover {
+            color: $hover;
+        }
+    }
+}

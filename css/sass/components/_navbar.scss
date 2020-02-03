@@ -1,0 +1,27 @@
+.mo-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 33px;
+}
+
+
+
+.nav-li {
+    margin-left: 20px;
+
+    &:last-of-type {
+        margin: 0;
+    }
+}
+
+.nav-anchor {
+    font-size: 16px;
+    color: $fff;
+    font-family: med;
+    @include transition(all 0.3s ease-in-out);
+
+    &:hover {
+        color: $hover;
+    }
+}
