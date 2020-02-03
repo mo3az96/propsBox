@@ -121,6 +121,12 @@ html {
   align-items: center;
   justify-content: center;
 }
+@media (max-width: 767px) {
+  .search-form .search-relative {
+    align-items: flex-start;
+    padding-top: 150px;
+  }
+}
 .search-form .search-relative .close-btn {
   position: absolute;
   left: 0;

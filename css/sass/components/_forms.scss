@@ -16,6 +16,11 @@
         align-items: center;
         justify-content: center;
 
+        @include xs {
+            align-items: flex-start;
+            padding-top: 150px;
+        }
+
         .close-btn {
             position: absolute;
             left: 0;
