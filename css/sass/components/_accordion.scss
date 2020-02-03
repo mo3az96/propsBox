@@ -38,6 +38,14 @@
 
 }
 
+header {
+    .mo-accordion {
+        &:after {
+            font-size: 10px;
+        }
+    }
+}
+
 .mo-panel {
     max-height: 0;
     overflow: hidden;

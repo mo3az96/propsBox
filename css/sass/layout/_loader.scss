@@ -9,6 +9,12 @@
     right: 0;
     background-color: #fff;
     z-index: 99999;
+
+    img {
+        @include xs {
+            width: 120px;
+        }
+    }
 }
 
 @-webkit-keyframes pulse {

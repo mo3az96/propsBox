@@ -202,7 +202,7 @@ $(document).ready(function () {
         })
 
         $('.brop-link .nav-anchor').click(function () {
-            $(".megaslide").slideToggle(500);
+            $(this).siblings().slideToggle(500);
 
         })
         $(".gallery .col-md-4").unwrap();

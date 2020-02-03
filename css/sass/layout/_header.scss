@@ -4,7 +4,7 @@ header {
     left: 0;
     right: 0;
     top: 0;
-    border-bottom: 1px solid rgba($fff, 0.2);
+    border-bottom: 1px solid rgba($black, 0.4);
     padding: 20px 0;
     z-index: 9;
 
@@ -71,10 +71,13 @@ header {
 
         @include xs {
             color: $black;
-        }
-
-        @include xs {
             margin-right: 20px;
+        }
+    }
+
+    .mo-wishlist-icon {
+        @include xs {
+            display: none;
         }
     }
 
@@ -83,12 +86,38 @@ header {
 
         @include xs {
             display: flex;
+            order: 1;
+        }
+    }
+
+    .mo-menu-icon {
+        display: none;
+
+        @include xs {
+            display: flex;
+            order: 3;
+        }
+    }
+
+    .mo-cart-icon {
+        @include xs {
+            order: 1;
+        }
+    }
+
+    .mo-search-icon {
+        @include xs {
+            order: 2;
         }
     }
 
     .user-anchor-div {
         position: relative;
         margin-right: 27px;
+
+        @include xs {
+            display: none;
+        }
 
         .user-anchor {
             margin: 0;
