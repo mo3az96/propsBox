@@ -103,6 +103,7 @@
     font-size: 20px;
     text-align: right;
     color: $fff;
+    border-radius: 0;
     @include transition(all 0.3s ease-in-out);
 
     &::placeholder {
